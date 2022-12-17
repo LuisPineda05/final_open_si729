@@ -1,4 +1,4 @@
-package com.ecodrive.platform.shared.configuration;
+package com.ecodrive.platform.u20201e705.shared.configuration;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;

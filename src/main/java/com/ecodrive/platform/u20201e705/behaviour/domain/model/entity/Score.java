@@ -1,5 +1,6 @@
-package com.ecodrive.platform.behaviour.domain.model.entity;
+package com.ecodrive.platform.u20201e705.behaviour.domain.model.entity;
 
+import com.ecodrive.platform.u20201e705.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,7 +14,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Entity
 @Table(name = "scores")
-public class Score {
+public class Score extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

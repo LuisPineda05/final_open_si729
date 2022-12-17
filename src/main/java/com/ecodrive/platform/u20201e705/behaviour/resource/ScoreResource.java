@@ -1,4 +1,4 @@
-package com.ecodrive.platform.behaviour.resource;
+package com.ecodrive.platform.u20201e705.behaviour.resource;
 
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package com.ecodrive.platform.shared.mapping;
+package com.ecodrive.platform.u20201e705.shared.mapping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

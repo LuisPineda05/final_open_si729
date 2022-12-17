@@ -1,4 +1,4 @@
-package com.ecodrive.platform.shared.exception;
+package com.ecodrive.platform.u20201e705.shared.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

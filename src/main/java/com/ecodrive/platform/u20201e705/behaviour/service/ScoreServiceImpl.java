@@ -1,11 +1,11 @@
-package com.ecodrive.platform.behaviour.service;
+package com.ecodrive.platform.u20201e705.behaviour.service;
 
 
-import com.ecodrive.platform.behaviour.domain.model.entity.Score;
-import com.ecodrive.platform.behaviour.domain.persistence.ScoreRepository;
-import com.ecodrive.platform.behaviour.domain.service.ScoreService;
-import com.ecodrive.platform.shared.exception.ResourceNotFoundException;
-import com.ecodrive.platform.shared.exception.ResourceValidationException;
+import com.ecodrive.platform.u20201e705.behaviour.domain.model.entity.Score;
+import com.ecodrive.platform.u20201e705.behaviour.domain.persistence.ScoreRepository;
+import com.ecodrive.platform.u20201e705.behaviour.domain.service.ScoreService;
+import com.ecodrive.platform.u20201e705.shared.exception.ResourceNotFoundException;
+import com.ecodrive.platform.u20201e705.shared.exception.ResourceValidationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -14,6 +14,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 import java.util.List;
 import java.util.Set;
+import java.util.function.IntToLongFunction;
 
 @Service
 public class ScoreServiceImpl implements ScoreService {
@@ -58,5 +59,28 @@ public class ScoreServiceImpl implements ScoreService {
             throw new ResourceValidationException(ENTITY, violations);
 
         return scoreRepository.save(score);
+    }
+
+    @Override
+    public Score create(Score score, Long driverId) {
+        score.setDriverId(driverId);
+        Set<ConstraintViolation<Score>> violations = validator.validate(score);
+
+        if(!violations.isEmpty())
+            throw new ResourceValidationException(ENTITY, violations);
+
+        return scoreRepository.save(score);
+    }
+
+    @Override
+    public Score getAverage(Long driverId) {
+        Score newScore = new Score();
+        newScore.setValue(scoreRepository.findAverage(driverId));
+        return newScore;
+    }
+
+    @Override
+    public Score getMax(Long driverId) {
+        return scoreRepository.findFirstByDriverIdOrderByValueDesc(driverId);
     }
 }

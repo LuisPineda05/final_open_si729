@@ -1,6 +1,6 @@
-package com.ecodrive.platform.behaviour.domain.service;
+package com.ecodrive.platform.u20201e705.behaviour.domain.service;
 
-import com.ecodrive.platform.behaviour.domain.model.entity.Score;
+import com.ecodrive.platform.u20201e705.behaviour.domain.model.entity.Score;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -14,4 +14,10 @@ public interface ScoreService {
     Score getById(Long scoreId);
     List<Score> getByDriverId(Long driverId);
     Score create(Score score);
+
+    Score create(Score score, Long driverId);
+
+    Score getAverage(Long driverId);
+
+    Score getMax(Long driverId);
 }

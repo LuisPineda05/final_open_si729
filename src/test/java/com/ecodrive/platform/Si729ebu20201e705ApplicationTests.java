@@ -1,4 +1,4 @@
-package com.ecodrive.si729ebu20201e705;
+package com.ecodrive.platform;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

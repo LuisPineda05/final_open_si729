@@ -1,4 +1,4 @@
-package com.ecodrive.platform.behaviour.mapping;
+package com.ecodrive.platform.u20201e705.behaviour.mapping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

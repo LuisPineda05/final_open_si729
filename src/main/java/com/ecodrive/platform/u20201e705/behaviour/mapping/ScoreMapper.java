@@ -1,9 +1,9 @@
-package com.ecodrive.platform.behaviour.mapping;
+package com.ecodrive.platform.u20201e705.behaviour.mapping;
 
-import com.ecodrive.platform.behaviour.domain.model.entity.Score;
-import com.ecodrive.platform.behaviour.resource.CreateScoreResource;
-import com.ecodrive.platform.behaviour.resource.ScoreResource;
-import com.ecodrive.platform.shared.mapping.EnhancedModelMapper;
+import com.ecodrive.platform.u20201e705.behaviour.domain.model.entity.Score;
+import com.ecodrive.platform.u20201e705.behaviour.resource.CreateScoreResource;
+import com.ecodrive.platform.u20201e705.behaviour.resource.ScoreResource;
+import com.ecodrive.platform.u20201e705.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

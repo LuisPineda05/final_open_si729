@@ -1,4 +1,4 @@
-package com.ecodrive.platform.behaviour.resource;
+package com.ecodrive.platform.u20201e705.behaviour.resource;
 
 import lombok.*;
 
@@ -11,8 +11,6 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class CreateScoreResource {
 
-    @NotNull
-    private Long driverId;
 
     @NotNull
     private Float value;

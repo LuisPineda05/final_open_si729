@@ -1,4 +1,4 @@
-package com.ecodrive.platform.shared.exception;
+package com.ecodrive.platform.u20201e705.shared.exception;
 
 import javax.validation.ConstraintViolation;
 import org.springframework.http.HttpStatus;
